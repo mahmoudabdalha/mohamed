@@ -1,0 +1,1331 @@
+<?php
+if(isset($_POST['submit'])){
+ //تم ضغط الزر 
+    $name=$_post['name']; 
+
+
+
+?>
+<!doctype html>
+<html>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+  <title>  استماره زياره مشرف التعليم الاهلي </title>
+<style>
+  * {
+  box-sizing: border-box;
+
+}
+
+body{
+margin: 10px;
+padding: 0;
+font-size:larger; 
+border: radius 5px;
+font-size: 18px;
+text-transform: uppercase;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+}
+input , select {
+  width:240px;
+   padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  
+}
+textarea   {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 40px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+ input [type = checkbox] {
+ width:100px;
+ height:30px; 
+ padding:10px; 
+  }
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  width: 300px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+h1 {
+  background-color:#444;
+ text-align:center;
+  font-weight:bold;
+  color:#fff;
+  padding:9px;
+  font-size:24px;
+  
+}
+</style>
+</head>
+<body>
+  <div class="container">
+<header> <p style="text-align: center;font-size: large;"> المملكه العربيه السعوديه<br> وزاره التعليم 
+ <br> وكاله التعليم الاهلي  </p>   
+
+<p>   </p>
+
+<p>   </p>
+
+
+
+</header>
+    <div class="panel-heading" style="background-color:#111111;  color: darkturquoise; padding: 10px; margin-bottom: 10px;">
+        <h1>       زياره مشرف للمدارس الاهليه</h1> </div>
+
+      <label>    تاريخ الزياره </label>
+        <input placeholder=" تاريخ الزياره " class="form-control" oninput="this.classdate = ''" name="Date of visit" value="<?php echo $Date;?>>
+    
+        <label>  رقم الزياره  </label>
+    <input class="form-control" placeholder="رقم الزياره" oninput="this.classnumber = ''" name="visit_number" value="<?php echo $visit_number;?>>
+   
+   <label>
+    نوع الزياره
+</label>
+        <select id="type_visit" name="type_visit">
+          <option value="australia"> مسحيه</option>
+          <option value="canada"> توجيهيه</option>
+          <option value="usa"> اشرافيه </option>
+        </select>
+  
+  <div class="form-inline" action="index.html">
+  <!-- One "tab" for each step in the form:--> 
+<div class="container">
+  
+      
+      <h1 style="text-align:center;">  اولا: 1- بيانات عامه عن المدرسه </h1> </div>
+
+      <label>  اسم المدرسه        </label>
+    <input  class="form-control" placeholder="اسم المدرسه" oninput="this.classschool = ''" name="school_name" value="<?php echo $school_name;?>">
+   
+
+ <label>       رقم الترخيص</label>
+
+    <input  class="form-control" placeholder="رقم الترخيص " oninput="this.classlicensenumber = ''" name="license_number"  value="<?php echo $license_number;?>">
+  
+  <label>   
+    نوع المدرسه  
+    </label>
+    <select id="type of visit" name="type of visit"  value=""> 
+      <option value="australia"> بنات </option>
+      <option value="canada">   بنين</option>
+    </select>
+
+  
+     <label> المرحله التعليميه  </label>
+  <input class="form-control"  placeholder="المرحله التعليميه " oninput="this.classFoundation = ''" name="stage_learning"  value="<?php echo $stage_learning;?>">
+        
+     <label> سنه التاسيس  </label>
+  <input  class="form-control" placeholder=" سنه التاسيس" oninput="this.classyearfounded = ''" name="year_founded"  value="<?php echo $year_founded;?>">
+ 
+      
+     <label>   نوع المبني  </label>  
+   
+    <select id="type_bulit" name="type_bulit"  value="<?php echo $type_bulit;?>">
+        <option value="learning"> تعليمي  </option>
+        <option value="unlearning">  غير تعليمي </option>
+      </select>
+   
+
+
+      <label> رقم هاتف المدرسه </label>
+    <input class="form-control" placeholder="رقم هاتف المدرسه " oninput="this.classphoneschoolnumber = ''" name="phone_school_number"  value="<?php echo $phone_school_number;?>">
+
+
+    
+    <label>اسم المالك </label>
+    <input class="form-control"  placeholder=" اسم المالك " oninput="this.className = ''" name="have_name"  value="<?php echo $have_name;?>">
+    
+
+    
+    <label>رقم التواصل </label>
+  <input  class="form-control" placeholder=" رقم التواصل " oninput="this.classscontacthave = ''" name="have contact_me "  value="<?php echo $phone_school_number;?>">
+  
+  
+  
+  <label>قائد المدرسه </label>
+  <input class="form-control"  placeholder= " قائد المدرسه"   oninput="this.classleader = ''" name="school_leader"  value="<?php echo $school_leader;?>">
+    
+  <label> رقم التواصل</label>
+  <input  class="form-control" placeholder=" رقم التواصل " oninput="this.classcontactleader = ''" name="contact_me_leader" value="<?php echo $contact_me_leader;?>">
+
+<br><br>
+
+  <label> نوع التعليم
+  </label>
+  <select id="type of learning" name="type of learning">
+    <option value="international"> دولي  </option>
+    <option value="keeping">    تحفيظ  </option>
+    <option value="learning"> مقررات </option>
+    <option value="unlearning"> منتسوري  </option>
+    <option value="special education"> تربيه خاصه  </option>
+    <option value=" senior education">  تعليم كبار </option>
+    <option value=" egyption track "> مسار مصري  </option>
+  </select>  
+  
+  <label> البريد الالكتروني </label>
+  <input  class="form-control" placeholder=" البريد الالكتروني " oninput="this.classyearfounded = ''" name="email">
+
+  <label> الطاقه الاستيعابيه </label>
+  <input  class="form-control" placeholder=" الطاقه الاستيعابيه" oninput="this.classAbsorptivecapacity = ''" name="Absorptive_capacity"  value="<?php echo $Absorptive_capacity;?>">
+<br>
+<br></div></div>
+
+<div class="row">
+  <label> <h1>
+    المدرسة لديها موافقات تعليمية (فصول ملحقة – إسناد – غير ذلك)	
+
+    
+    </h1>
+</label>
+    </div>
+
+  <label>نوعها  </label>
+<input  class="form-control" placeholder="نوعها " oninput="this.classkinding = ''" name="kinding"  value="<?php echo $kinding;?>">
+
+
+<label> رقمها  </label>
+
+<input  class="form-control" placeholder="رقمها " oninput="this.classnumberic = ''" name="numberic"  value="<?php echo $numberic;?>">
+
+
+<label> تاريخها  </label>
+<input  class="form-control" placeholder="تاريخها " oninput="this.classDate = ''" name="Date"  value="<?php echo $Date;?>">
+
+</form>
+
+    </div>
+
+<h1>   ب :  بيانات البرنامج التعليمي الدولي </h1>
+<table>
+  <label>  نوع البرنامج  </label>
+<input  class="form-control" placeholder= " نوع البرنامج " oninput="this.classProgram_type = ''" name="Program_type"  value="<?php echo $Program_type;?>">
+
+
+<label> تاريخ التطبيق </label>
+  <input class="form-control"  placeholder="تاريخ التطبيق  " oninput="this.classApplication_date = ''" name="Application_date"  value="<?php echo $Application_date;?>">
+
+
+  <label> صلاحيه الموافقه </label>
+<input  class="form-control" placeholder=" صلاحيه الموافقه " oninput="this.classValidity_of_approval = ''" name="Validity_of_approval"  value="<?php echo $Validity_of_approval;?>">
+
+<br>
+<label> صلاحيه الاعتماد الاكاديمي  </label>
+  <input  class="form-control" placeholder=" صلاحيه الاعتماد الاكاديمي " oninput="this.classThevalidity_of_theacademic_accreditation = ''" name="Thevalidity_of_theacademic_accreditation"  value="<?php echo  $Thevalidity_of_theacademic_accreditation;?>">
+
+
+  <label>  الالتزام بخطه البرنامج </label>
+<input class="form-control" placeholder=" الالتزام بخطه البرنامج " oninput="this.classCommitment_to_theprogram_plan = ''" name="Commitment_to_theprogram_plan"  value="<?php echo $Commitment_to_theprogram_plan;?>">
+
+
+<label> تدريس مواد الهويه </label>
+<input  class="form-control" placeholder=" تدريس مواد الهويه" oninput="this.classTeaching_identity_materials = ''" name="Teaching_identity_materials"  value="<?php echo $Teaching_identity_materials;?>">
+
+<br>
+<label> وجود منسق للبرنامج </label>
+<input  class="form-control" placeholder=" وجود منسق للبرنامج " oninput="this.classThepresence_of_aprogram_coordinator = ''" name="Thepresence_of_aprogram_coordinator"  value="<?php echo $Thepresence_of_aprogram_coordinator;?>">
+
+
+<label>رقم التواصل </label>
+<input class="form-control"  placeholder= " رقم التواصل"  oninput="this.classcontact_number = ''" name="contact_number"  value="<?php echo $contact_number;?>">
+
+</tr>
+
+<br><br>
+<h1>   ج : احصائيه نظاميه العاملين بالمدرسه  </h1>
+
+
+</table>
+
+<table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr> 
+       <th>  <h1>الوظيفه  </h1> </th>
+        <th> <h1> علي كفاله المدرسه </h1> </th>
+        <th><h1> علي نظام اجير </h1> </th>
+        <th><h1 style="font-size:18px; padding: 12px;"> توجد موافقه ولم تسجل في نظام اجير  </h1></th>
+        <th><h1> غير نظاميين </h1> </th> 
+        <th>  <h1>المجموع الكلي </h1> </th>
+        <th>
+ </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td> <h1>تعليميه </h1> </td>    
+          
+    <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+     </td>
+    <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+       </td>
+     <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+     </td>
+     <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+     </td>
+     <td> <input type="text" name="total" value="<?php echo $phone_school_number;?>">
+     </td>
+     
+        </tr>
+<tr>
+    <td>  <h1>اداريه </h1> </td> 
+            
+    <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+    </td>
+   <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+      </td>
+    <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+    </td>
+    <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+    </td>
+    <td> <input type="text" name="total" value="<?php echo $phone_school_number;?>">
+    </td>
+    </tr>
+    <tr>
+        <td>  <h1>خدميه  </h1>
+         </td> 
+         <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+         </td>
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+           </td>
+         <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+         </td>
+         <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+         </td>
+         <td> <input type="text" name="total" value="<?php echo $phone_school_number;?>">
+         </td>
+</tbody></table>
+<br> 
+
+</form>
+<h1>
+   د : احصائيه باعداد الطلاب والفصول </h1>
+    <table class="table table-bordered">
+         <thead class="thead-dark">
+          
+              <th> <h1 style="font-size:18px; padding: 12px; font-weight: bold;"> المرحله الدراسيه </h1>   </th>
+      
+      <th>
+
+              <h1>  
+        الطلاب 
+      
+        </h1>
+        
+
+<th> <h1> سعودي  </h1>  </th>
+  <th> <h1> غير سعودي </h1> </th>
+  </th>
+
+      <th> <h1> المجموع  </h1>
+       </th>
+        <th> <h1> المجموع الكلي  </h1></th>
+       
+      </tr>
+
+      </thead>
+
+      <tbody>
+        <tr>
+        <td> <h1>الروضه  </h1></td>    
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+        </td>
+       <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+          </td>
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+        </td>
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+        </td>
+        <td> <input type="text" name="total" value="<?php echo $phone_school_number;?>">
+        </td>    </tr>
+<tr>
+<td> <h1>
+الابتدائيه   </h1>
+</td> 
+        
+<td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+</td>
+<td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+  </td>
+<td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+</td>
+<td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+</td>
+<td> <input type="text" name="total" value="<?php echo $phone_school_number;?>">
+</td>
+    </tr>
+
+    <tr>
+
+        <td> <h1> المتوسطه  </h1> </td> 
+          
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+        </td>
+       <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+          </td>
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+        </td>
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+        </td>
+        <td> <input type="text" name="total" value="<?php echo $phone_school_number;?>">
+        </td>
+    </tr>
+    <tr>
+
+        <td> <h1> الثانويه </h1></td>
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+        </td>
+       <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+          </td>
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+        </td>
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+        </td>
+        <td> <input type="text" name="total" value="<?php echo $phone_school_number;?>">
+        </td>
+    </tr>
+
+    <tr>
+
+        <td> <h1>  المجموع </h1> </td>
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+        </td>
+       <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+          </td>
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+        </td>
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+        </td>
+        <td> <input type="text" name="total" value="<?php echo $phone_school_number;?>">
+        </td>
+
+</tr>
+
+<tr>
+  <td> <h1>  المجموع الكلي </h1></td>
+  <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+  </td>
+ <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+    </td>
+  <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+  </td>
+  <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+  </td>
+  <td> <input type="text" name="total" value="<?php echo $phone_school_number;?>">
+  </td>
+    
+</tr>
+
+</tbody></table>
+
+
+
+<br> <br>
+
+
+
+
+
+<h1> هـ- إحصائية الغياب:
+     </h1>
+    <table class="table table-bordered">
+         <thead class="thead-dark">
+          
+              <th> <h1>  العنصر   </h1> </th>
+      
+      <th>
+<h1>
+      
+        طلاب س
+   </h1>   
+      </th>
+
+<th> <h1> طلاب غ   </h1>  </th>
+  <th> <h1> معلمون س  </h1></th>
+  </th>
+
+      <th>  <h1>معلمون غ </h1> </th>
+        <th> <h1> اداريون س </h1> </th>
+        
+        <th> <h1> اداريون  غ  </h1></th>
+       
+      </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+        <td> <h1 style="font-size:18px; padding: 12px; font-weight: bold; width: 100px;"> العدد الكلي  </h1> </td>    
+        
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+        </td>
+       <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+          </td>
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+        </td>
+        <td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+        </td>
+        <td> <input type="text" name="total" value="<?php echo $phone_school_number;?>">
+        </td>
+        </tr>
+<tr>
+<td> <h1>
+الغياب 
+</h1>
+</td> 
+         
+<td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+</td>
+<td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+  </td>
+<td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+</td>
+<td> <input type="text" name="total"  value="<?php echo $phone_school_number;?>">
+</td>
+<td> <input type="text" name="total" value="<?php echo $phone_school_number;?>">
+</td>        
+    </tr>
+
+   
+  
+
+
+</tbody></table>
+
+
+
+<br> <br>
+
+
+<h1>
+  ثانيا : تنظيمات اداريه
+  
+  </h1>
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+     <tr> 
+       <th><h1> المعايير  </h1> </th>
+      <th>
+        <h1 style="margin-right: 20px; width:110px;">
+          التقييم      
+        </h1>
+        </th> 
+        <th><h1> نعم  </h1></th>
+        <th><h1> لا  </h1></th> 
+       
+       
+       <th> <h1>  ملحوظات  </h1></th>
+       </th> </th>
+       
+        
+         
+       </tr>
+ </thead>
+
+
+    <tbody>
+      <tr>
+    
+      <td>سريان ترخيص المدرسة </td>
+<td></td>
+      <td> 
+        <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+      <td>  <input type="checkbox" class="form-check-input" name="no"> لا</td>
+     
+
+        <td> <textarea rows="2" cols="20"> </textarea></td>
+       
+      </tr>
+<tr>
+<td>
+  سريان شهاده السلامه من الدفاع المدني 
+</td> 
+<td></td>
+<td> 
+  <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+<td>   
+  <input type="checkbox" class="form-check-input" name="no">لا </td>
+  <td> <textarea rows="2" cols="20"> </textarea></td>
+      
+  </tr>
+
+
+<tr>
+<td>سريان شهادة التأمينات الاجتماعية وإشراك جميع الموظفين بالنظام			
+</td> 
+<td></td>
+<td> 
+  <input type="checkbox" class="form-check-input" name="yes"> نعم </td>
+<td>   
+  <input type="checkbox" class="form-check-input" name="no">لا </td>
+
+  <td> <textarea rows="2" cols="20"> </textarea></td>
+        </tr>
+
+  <tr>
+  <td>سريان شهادة السعوده
+  </td> 
+  <td></td>
+  <td> 
+    <input type="checkbox" class="form-check-input" name="yes"> نعم  </td>
+  <td>   
+    <input type="checkbox" class="form-check-input" name="no">لا </td>
+    <td><textarea rows="2" cols="20"> </textarea></td>
+        </tr>
+
+    <tr>
+    <td>وجود عقد للحراسات الأمنية والتزام حراس الأمن
+    </td> 
+    <td></td>
+    <td> 
+      <input type="checkbox" class="form-check-input" name="yes"> نعم </td>
+    <td>   
+      <input type="checkbox" class="form-check-input" name="no">لا </td>
+      <td> <textarea rows="2" cols="20" name="comment"> <?php echo $comment;?> </textarea> </td>
+          
+      </tr>
+
+      <tr>
+      <td>
+        الالتزام بالضوابط والتعليمات المنظمة للنقل المدرسي			
+      </td> 
+      <td></td>
+
+      <td> 
+        <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+      <td>   
+        <input type="checkbox" class="form-check-input" name="no">لا </td>
+        <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?></textarea> </td>
+            
+            
+        </tr>     
+        <tr>
+        <td>تنفيذ توجيهات مشرفي إدارة الأمن والسلامة المدرسية
+        </td> 
+        <td></td>
+        <td> 
+          <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+        <td>   
+          <input type="checkbox" class="form-check-input" name="no">لا </td>
+          <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+          
+              
+          </tr>      
+          <tr>
+          <td>التزام المدرسة بالرسوم الدراسية المعتمدة
+          </td> 
+          <td></td>
+          <td> 
+            <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+          <td>   
+            <input type="checkbox" class="form-check-input" name="no">لا </td>
+        
+            <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+          
+          </tr> 
+  
+            <tr>
+            <td>التزام المدرسة بقرار دعم الرواتب
+            </td> 
+            <td></td>
+            <td> 
+              <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+            <td>   
+              <input type="checkbox" class="form-check-input" name="no">لا </td>
+              <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+         
+                  
+              </tr>
+              <tr>
+              <td>وجود اللوائح والتعاميم المنظمة للعمل لدى إدارة المدرسة			
+              </td> 
+              <td></td>
+              <td> 
+                <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+              <td>   
+                <input type="checkbox" class="form-check-input" name="no">لا </td>
+                <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+         
+                    
+                </tr>      
+                <tr>
+                <td>وجود شهادة صلاحية للمعلمين والمعلمات			
+                </td> 
+                <td></td>
+                <td> 
+                  <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+                <td>   
+                  <input type="checkbox" class="form-check-input" name="no">لا </td>
+                  <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+       
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                    اكتمال ملفات شاغلي الوظائف التعليمية/الإدارية/الخدمية 
+(أوراق ثبوتية – صورة العقد – شهادة صلاحية)			
+		
+                            
+                    </td> 
+                    <td></td> 
+                    <td> 
+                      <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+                    <td>   
+                      <input type="checkbox" class="form-check-input" name="no">لا </td>
+                      <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+                    </tr> 
+                      </tbody></table>
+
+
+
+
+<h1>
+  
+  ثالثا: البيئه المدرسية
+  </h1>
+
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th> <h1> المعايير  </h1>  </th>
+        <th>
+          <h1 style="margin-right: 20px; width:110px;">
+            التقييم      
+          </h1>
+          </th> 
+          <th><h1> نعم  </h1></th>
+          <th><h1> لا  </h1></th> 
+         
+         
+         <th> <h1>  ملحوظات  </h1></th>
+         </th>
+         
+          
+           
+         </tr>
+ </thead>
+
+    <tbody>
+      <tr>
+    
+      <td> مظاهر الانتماء والولاء</td>
+      <td> </td>
+      <td> 
+        <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+      <td>   
+        <input type="checkbox" class="form-check-input" name="no">لا </td>
+        <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+   
+      </tr>
+
+      <tr>
+<td>مناسبة المبنى والمرافق وصيانتها (السلامة – النظافة- التهوية – الإضاءة – التكييف – التمديدات – مخارج الطوارئ)
+</td> 
+<td> </td>
+<td> 
+  <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+<td>   
+  <input type="checkbox" class="form-check-input" name="no">لا </td>
+  <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+   
+</tr>
+
+<td>الالتزام بالطاقة الاستيعابية			
+</td> 
+<td> </td>
+<td> 
+  <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+<td>   
+  <input type="checkbox" class="form-check-input" name="no">لا </td>
+  <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+          </tr>
+  <tr>
+  <td>كثافة الطلاب  داخل الفصول			
+  </td> 
+  <td> </td>
+  <td> 
+    <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+  <td>   
+    <input type="checkbox" class="form-check-input" name="no">لا </td>
+    <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+  </tr>      
+
+
+
+    <tr>
+    <td>توفر غرف مناسبة للكادر الإداري والتعليمي (مدير-وكيل-مرشد طلابي-رائد النشاط-معلمين)		
+    </td> 
+    <td> </td>
+    <td> 
+      <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+    <td>   
+      <input type="checkbox" class="form-check-input" name="no">لا </td>
+      <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+       
+      </tr>      
+      <tr>
+        <td> 
+        مناسبة الفصول الدراسية كبيئة تعليمية
+      </td> 
+      <td> </td>
+<td>
+      <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+      <td>   
+        <input type="checkbox" class="form-check-input" name="no">لا </td>
+        <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+      </tr>   
+
+        <tr>
+        <td>اكتمال التجهيزات المدرسية ومناسبتها(مختبرات- معامل-مصادر تعلم- فنية وبدنية- تربية أسرية- أركان تعليمية-مصلى)			
+        </td> 
+        <td> </td>
+        <td> 
+          <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+        <td>   
+          <input type="checkbox" class="form-check-input" name="no">لا </td>
+          <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+          
+          </tr>     
+          <tr>
+          <td>اكتمال تجهيزات الملاعب والساحات الخارجية ومناسبتها
+          </td>
+          <td> </td> 
+          <td> 
+            <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+          <td>   
+            <input type="checkbox" class="form-check-input" name="no">لا </td>
+            <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+      
+                
+            </tr>     
+            <tr>
+            <td>توافر دورات مياه كافية لأعداد الطلاب (دورة لكل 25طالب)(دورة لكل 10 أطفال
+            </td> 
+            <td> </td>
+            <td> 
+              <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+            <td>   
+              <input type="checkbox" class="form-check-input" name="no">لا </td>
+              <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+            </tr>
+              <tr>
+              <td>توافر مقصف مدرسي مع الالتزام بلائحة المقاصف المدرسية			
+              </td>
+              <td> </td> 
+              <td> 
+                <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+              <td>   
+                <input type="checkbox" class="form-check-input" name="no">لا </td>
+                <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+              </tr>
+                <tr>
+                <td>وجود شهادة صلاحية للمعلمين والمعلمات			
+                </td> 
+                <td> </td>
+                <td> 
+                  <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+                <td>   
+                  <input type="checkbox" class="form-check-input" name="no">لا </td>
+                  <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+                </tr>
+
+
+                  <tr>
+                    <td>
+                    اكتمال ملفات شاغلي الوظائف التعليمية/الإدارية/الخدمية 
+(أوراق ثبوتية – صورة العقد – شهادة صلاحية)			     
+                    </td> 
+                    <td> </td>
+                    <td> 
+                      <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+                    <td>   
+                      <input type="checkbox" class="form-check-input" name="no">لا </td>
+                      <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+       
+                          
+                      </tr> 
+                      </tbody></table>
+
+
+                      
+
+
+
+
+
+
+
+
+                      <h1>
+                        رابعا :
+             تعليم وتعلم
+                        </h1>
+                      
+                        <table class="table table-bordered">
+                             <thead class="thead-dark">
+                              
+                              <tr>
+                                <th> <h1> المعايير  </h1>  </th>
+                                <th>
+                                  <h1 style="margin-right: 20px; width:110px;">
+                                    التقييم      
+                                  </h1>
+                                  </th> 
+                                  <th><h1> نعم  </h1></th>
+                                  <th><h1> لا  </h1></th> 
+                                 
+                                 
+                                 <th> <h1>  ملحوظات  </h1></th>
+                                 </th>
+                                 
+                                  
+                                   
+                                 </tr>
+                          </thead>
+                      
+                          <tbody>
+                            <tr>
+                          
+                            <td> استخدام التقنية الحديثة في التدريس</td>
+                           
+                           <td> </td>
+                           
+                            <td> 
+                              <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+                            <td>   
+                              <input type="checkbox" class="form-check-input" name="no">لا </td>
+                              <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+  
+          
+                            </tr>
+
+                            <td><p>
+                            توافر مناهج إثرائية لها موافقة      <p> </td> 
+                            <td> </td>
+                           
+                            <td> 
+                              <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+                            <td>   
+                              <input type="checkbox" class="form-check-input" name="no">لا </td>
+                              <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+   
+          
+                                
+                        
+                      </tr>
+                      
+                     
+                        <tr>
+                          <td> 		تحليل نتائج الطلاب في المواد الدراسية
+                        </td> 
+                        <td> </td>
+                           
+                        <td> 
+                          <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+                        <td>   
+                          <input type="checkbox" class="form-check-input" name="no">لا </td>
+                          <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+   
+                          </tr>      
+                      
+                      
+                      </tbody></table>
+
+
+
+<br> <br>
+
+<br> <br>
+
+
+
+<h1>
+  خامسا  :
+متابعه وتقويم 
+  </h1>
+
+  <table class="table table-bordered">
+       <thead class="thead-dark">
+        
+        <tr>
+          <th> <h1> المعايير  </h1>  </th>
+          <th>
+            <h1 style="margin-right: 20px; width:110px;">
+              التقييم      
+            </h1>
+            </th> 
+            <th><h1> نعم  </h1></th>
+            <th><h1> لا  </h1></th> 
+           
+           
+           <th> <h1>  ملحوظات  </h1></th>
+           </th>
+           
+            
+             
+           </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+    
+      <td> خطة عمل لقائد المدرسة</td>
+      <td> </td>
+                           
+      <td> 
+        <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+      <td>   
+        <input type="checkbox" class="form-check-input" name="no">لا </td>
+        <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+  
+
+      </tr>
+
+      <td>
+        وجود خطة للنشاط الطلابي                      </td> 
+        <td> </td>
+                           
+                 <td> 
+                              <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+                            <td>   
+                              <input type="checkbox" class="form-check-input" name="no">لا </td>
+                              <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+      
+          
+      
+  
+</tr>
+  <tr>
+    <td> 	سجل زيارات (مدير – مشرف تربوي)
+  </td> 
+  <td> </td>
+                           
+  <td> 
+    <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+  <td>   
+    <input type="checkbox" class="form-check-input" name="no">لا </td>
+    <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+   
+
+    </tr>      
+
+
+</tbody></table>
+
+<br> <br>
+
+<br> <br>
+
+
+
+
+
+<h1>
+  سادسا  :
+توجيه وارشاد طلابي
+  </h1>
+
+  <table class="table table-bordered">
+       <thead class="thead-dark">
+        <tr>
+          <th> <h1> المعايير  </h1>  </th>
+          <th>
+            <h1 style="margin-right: 20px; width:110px;">
+              التقييم      
+            </h1>
+            </th> 
+            <th><h1> نعم  </h1></th>
+            <th><h1> لا  </h1></th> 
+           
+           
+           <th> <h1>  ملحوظات  </h1></th>
+           </th>
+           
+            
+             
+           </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+    
+      <td>وجود البرامج التوجيهية المعنية بسلوك الطلاب			</td>
+      <td> </td>
+                           
+      <td> 
+        <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+      <td>   
+        <input type="checkbox" class="form-check-input" name="no">لا </td>
+        <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+    
+
+      </tr>
+
+      <td>
+        وجود برامج لرعاية الطلاب الموهوبين                      </td> 
+        
+        <td> </td>
+                           
+                            <td> 
+                              <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+                            <td>   
+         <input type="checkbox" class="form-check-input" name="no">لا </td>
+        <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+       
+          
+  
+</tr>
+
+<tr>
+<td>وجود برامج لرعاية الطلاب الموهوبين			
+</td> 
+<td> </td>
+                           
+<td> 
+  <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+<td>   
+  <input type="checkbox" class="form-check-input" name="no">لا </td>
+  <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+  
+        </tr>
+  
+
+          
+  <tr>
+    <td> 		البرامج المنفذة لمعالجة الغياب والتأخر
+  </td> 
+  <td> </td>
+                           
+  <td> 
+    <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+  <td>   
+    <input type="checkbox" class="form-check-input" name="no">لا </td>
+    <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+  
+
+        
+    </tr>      
+      
+    <tr>
+      <td> 		وجود مبادرات للمسؤولية الاجتماعية			
+    </td> 
+    <td> </td>
+                           
+    <td> 
+      <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+    <td>   
+      <input type="checkbox" class="form-check-input" name="no">لا </td>
+      <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+  
+
+      </tr>      
+      
+      <tr>
+        <td> وجود مبادرات للمسؤولية الاجتماعية			
+      </td> 
+      <td> </td>
+                           
+                            <td> 
+                              <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+                            <td>   
+                              <input type="checkbox" class="form-check-input" name="no">لا </td>
+                              <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+  
+          
+            
+        </tr>            
+
+</tbody></table>
+<br> <br> <br>
+
+
+
+
+
+
+
+<h1>
+  سابعا  :
+تدريب وتطوير 
+  </h1>
+
+  <table class="table table-bordered">
+       <tr class="thead-dark">
+        <tr>
+          <th> <h1> المعايير  </h1>  </th>
+   <th>
+  <h1 style="margin-right: 20px; width:110px;">
+    التقييم      
+  </h1>
+  </th> 
+  <th><h1> نعم  </h1></th>
+  <th><h1> لا  </h1></th> 
+ 
+ 
+ <th> <h1>  ملحوظات  </h1></th>
+ </th>
+ 
+  
+   
+ </tr>
+        <tr>
+          
+      <td> وجود إدارة للتطوير أو الإشراف التربوي أو عقد مع مركز إشراف وتدريب</td>
+      <td>  </td>
+                           
+      <td> 
+        <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+      <td>   
+        <input type="checkbox" class="form-check-input" name="no">لا </td>
+        <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+   
+        </tr>
+
+          
+       
+        <tr>
+        
+      <td>
+        وجود خطة تدريب ودورات تدريبية كافية للهيئة التعليمية والإدارية			                    </td> 
+        
+        <td> </td>
+                           
+        <td> 
+          <input type="checkbox" class="form-check-input" name="yes"> نعم</td>
+        <td>   
+          <input type="checkbox" class="form-check-input" name="no">لا </td>
+          <td> <textarea rows="2" cols="20" name="comment"><?php echo $comment;?> </textarea> </td>
+    
+
+              </tr>
+        </table>
+           
+
+
+<br> <br> <br>
+
+
+
+  <div class="form-group">
+   <h2>
+  ملحوظة: يتم تسجيل الملحوظات الجديرة بالمتابعة والتي تم رصدها في سجل زيارات المشرفين التربويين وترفق صورة منها.
+</h2>
+
+  
+  <label for="comment">    <h1>
+   أبرز الجوانب الإيجابية أو التجارب التربوية:
+</h1>
+    
+   </label>
+  <textarea class="form-control" rows="15"column="5" id="comment" value="<?php echo $comment;?> 
+  style="width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;"></textarea>
+</div> 
+
+  <table class="table table-bordered">
+       <thead class="thead-dark">
+        
+            <th>  الصفه   </th>
+  
+    <th>
+    الاسم
+    </th> 
+
+<th> التوقيع  </th>
+<th> </th>
+
+</th> </th>
+    
+</tr>
+    </thead>
+
+    <tbody>
+      <tr>
+    
+      <td><h1> المشرف التربوي </h1> </td>
+      <td><input type="text" name="name" value="<?php  echo $name;?>">
+      
+        <span class="error"><?php echo $name;?></span> 
+      
+      
+      </td>
+      <td><input type="text" name="admin" value="<?php  echo $admin;?>"></td>
+      </tr>
+
+      <tr>
+        
+        <td>   <h1>مدير اداره المدارس الاهليه  </h1>  </td>
+      <td> <h2> ادريس بن عواجي حمدي </h2> </td>
+
+      <td><input type="text" name="Signature" value="">
+      
+        <span class="error"> <?php echo $SignatureErr;?></span>      
+      </td>
+        
+      
+  
+</tr>
+
+
+
+
+</tbody></table>
+
+<div class="x" style="width: 700px; padding: 30px;  margin-right:200px;   text-align: center; ">
+<input type="submit" class="btn btn-primary" value="Submit">
+</div>
+
+
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+  <h1>زياره مشرف للمدارس الاهليه</h1>
+  </div>
+</div>
+
+
+
+
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+ <!-- Include all compiled plugins (below), or include individual files as needed -->
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+</body></html>
